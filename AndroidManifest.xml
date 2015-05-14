@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.javaprotrepticon.android.teddemo"
+    android:versionCode="1"
+    android:versionName="1.0.0-alpha.1" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="org.javaprotrepticon.android.teddemo.TedDemo"
+        android:allowBackup="true"
+        android:icon="@drawable/ted_logotype"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.MainTheme" >
+        <activity android:name="org.javaprotrepticon.android.teddemo.activity.MainActivity" />
+        <activity
+            android:name="org.javaprotrepticon.android.teddemo.activity.LauncherActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
